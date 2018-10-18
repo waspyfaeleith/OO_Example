@@ -17,7 +17,7 @@ public class Prey extends Animal {
         return nutritionalValue;
     }
 
-    public double weightIncrease() {
-        return (this.calories / nutritionalValue) * 2;
+    public double effectOnWeight() {
+        return (this.calories / nutritionalValue) / 1000.00;
     }
 }

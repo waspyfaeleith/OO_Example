@@ -8,7 +8,7 @@ public class PreyTest {
 
     @Before
     public void before() {
-        prey = new Prey("Sammy", "Salmon", 1, 100, 2.0);
+        prey = new Prey("Sammy", "Salmon", 1, 500, 2.0);
     }
 
     @Test
@@ -23,12 +23,12 @@ public class PreyTest {
 
     @Test
     public void hasWeight() {
-        assertEquals(2, prey.getWeight(), 0.01);
+        assertEquals(1, prey.getWeight(), 0.01);
     }
 
     @Test
     public void hasCalories() {
-        assertEquals(1000, prey.getCalories());
+        assertEquals(500, prey.getCalories());
     }
 
     @Test
@@ -39,15 +39,15 @@ public class PreyTest {
     @Test
     public void canChangeWeight() {
         prey.changeWeight(1);
-        assertEquals(3, prey.getWeight(), 0.01);
+        assertEquals(2, prey.getWeight(), 0.01);
     }
 
     @Test
     public void hasNutritionalValue() {assertEquals( 2.0, prey.getNutritionalValue(), 0.01);}
 
     @Test
-    public void canGetWeightEffect() {
-        assertEquals(10, prey.weightIncrease(), 0.01);
+    public void canGetEffectOnWeight() {
+        assertEquals(0.25, prey.effectOnWeight(), 0.01);
     }
 
 }

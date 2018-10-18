@@ -45,10 +45,10 @@ public class HerbivoreTest {
 
     @Test
     public void canEat() {
-        EdiblePlant food = new EdiblePlant("Grass", 10, 100);
+        EdiblePlant food = new EdiblePlant("Grass", 10.00);
         animal.eat(food);
         assertEquals(1, animal.numberOfItemsInStomach());
-        assertEquals(451, animal.getWeight(), 0.01);
+        assertEquals(450.1, animal.getWeight(), 0.01);
     }
 
 

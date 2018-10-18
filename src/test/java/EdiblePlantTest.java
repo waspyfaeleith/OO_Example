@@ -8,7 +8,7 @@ public class EdiblePlantTest {
 
     @Before
     public void before() {
-        plant = new EdiblePlant("Carrots", 100, 5.0);
+        plant = new EdiblePlant("Carrots", 3.0);
     }
 
     @Test
@@ -17,10 +17,10 @@ public class EdiblePlantTest {
     }
 
     @Test
-    public void hasCalories() {
-        assertEquals(100, plant.getCalories());
-    }
+    public void hasNutritionalValue() {assertEquals( 3.0, plant.getNutritionalValue(), 0.01);}
 
     @Test
-    public void hasNutritionalValue() {assertEquals( 5.0, plant.getNutritionalValue(), 0.01);}
+    public void canGetEffectOnWeight() {
+        assertEquals(0.03, plant.effectOnWeight(), 0.01);
+    }
 }

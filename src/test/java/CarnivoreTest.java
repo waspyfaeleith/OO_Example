@@ -44,10 +44,10 @@ public class CarnivoreTest {
 
     @Test
     public void canEat() {
-        Prey food = new Prey("Jerry", "Mouse", 1, 10, 20.0);
+        Prey food = new Prey("Jerry", "Mouse", 1, 100, 10.0);
         animal.eat(food);
         assertEquals(1, animal.numberOfItemsInStomach());
-        assertEquals(10, animal.getWeight(), 0.01);
+        assertEquals(5.01, animal.getWeight(), 0.01);
     }
 
 

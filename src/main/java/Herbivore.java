@@ -10,7 +10,7 @@ public class Herbivore extends Animal {
 
     public void eat(EdiblePlant food) {
         this.stomachContents.add(food);
-        this.changeWeight(food.weightIncrease());
+        this.changeWeight(food.effectOnWeight());
     }
 
     public int numberOfItemsInStomach() {

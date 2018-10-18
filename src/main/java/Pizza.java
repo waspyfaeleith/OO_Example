@@ -21,7 +21,7 @@ public class Pizza {
         return this.nutritionalValue;
     }
 
-    public double weightIncrease() {
-        return (this.calories * nutritionalValue) / 10;
+    public double effectOnWeight() {
+        return (this.calories * nutritionalValue) / 100;
     }
 }
